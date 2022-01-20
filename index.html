@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              current: "currentcolor",
+              main: "#18191c",
+              sidebar: "#1d2024",
+              activeNhover:'#2a2b31',
+              disableLink:'#43444a',
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <!-- for main body color-#18191c -->
+  <!-- for side bar color - #1c2024 -->
+
+  <body class="bg-main">
+    <aside class="relative bg-sidebar h-screen w-fit flex flex-col items-center justify-around shadow-xl">
+      <div class="">
+        <a href="index.html" class="text-2xl font-semibold uppercase hover:text-gray-300">
+            <img class="w-10 m-auto" src="./assets/icons/Combined Shape.png" alt=""/>
+        </a>
+      </div>
+      <nav class="text-white text-base flex flex-col items-center font-semibold ">
+        <a
+          href="#index.html"
+          class="active-nav-link text-white text-opacity-30 hover:opacity-100 hover:bg-activeNhover nav-item active:text-green"
+        >
+          <i class="lni lni-layout text-xl px-10 py-5 hover:text-white active:text-green"></i>
+        </a>
+        <a
+          href="#blank.html"
+          class="text-white text-opacity-30 hover:opacity-100 hover:bg-activeNhover nav-item active:text-green"
+        >
+          <i class="lni lni-bar-chart  text-xl px-10 py-5 hover:text-white active:text-green"></i>
+        </a>
+        <a
+          href="#tables.html"
+          class="text-white text-opacity-30 hover:opacity-100 hover:bg-activeNhover nav-item active:text-green"
+        >
+          <i class="lni lni-bitcoin text-xl px-10 py-5 hover:text-white active:text-green"></i>
+        </a>
+        <a
+          href="#forms.html"
+          class="text-white text-opacity-30 hover:opacity-100 hover:bg-activeNhover nav-item active:text-green"
+        >
+          <i class="lni lni-alarm-clock text-xl px-10 py-5 hover:text-white active:text-green"></i>
+        </a>
+        <a
+          href="#tabs.html"
+          class="text-white text-opacity-30 hover:opacity-100 hover:bg-activeNhover nav-item active:text-green"
+        >
+          <i class="lni lni-calculator text-xl px-10 py-5 hover:text-white active:text-green"></i>
+        </a>
+        <a
+          href="#calendar.html"
+          class="text-white text-opacity-30 hover:opacity-100 hover:bg-activeNhover nav-item"
+        >
+          <i class="lni lni-empty-file text-xl px-10 py-5 hover:text-white active:text-green"></i>
+        </a>
+        <a
+          href="#calendar.html"
+          class="text-white text-opacity-30 hover:opacity-100 hover:bg-activeNhover nav-item"
+        >
+          <i class="lni lni-cog text-xl px-10 py-5  hover:text-white active:text-green"></i>
+        </a>
+      </nav>
+      <div class="">
+        <a href="#index.html" class="text-3xl font-semibold uppercase hover:text-gray-300">
+            <i class="lni lni-wechat"></i>
+        </a>
+      </div>
+    </aside>
+    <script src="./setting.js"></script>
+  </body>
+</html>
