@@ -23,9 +23,12 @@ function openMenu() {
 function mobileMenu() {
     const mobileMenuIcon = document.getElementById('mobileMenuIcon');
     const mobileMenu = document.querySelector('.mobile-menu');
-    mobileMenu.style.width = '44px';
+    const mobileMenuCloseIcon = document.getElementById("mobileMenuCloseIcon");
+    mobileMenu.style.width = '30px';
     mobileMenuIcon.classList.toggle("mobile-menu-icon");
+    mobileMenuCloseIcon.classList.toggle('mobile-menu-close-icon')
     console.log('working');
     var mobileNavMainx = document.getElementById("mobileNavMain");
     mobileNavMainx.classList.toggle('mobileNavMain-open');
+    // mobileNavMainx.classList.toggle('mobileNavMain-close');
 }

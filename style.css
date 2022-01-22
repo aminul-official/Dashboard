@@ -37,19 +37,59 @@ body {
 
 .mobileNavMain-open{
   display: flex !important;
-  opacity:1 !important;
+  opacity:0;
   flex-direction: column;
   height: fit-content !important;
-  transition: all 1s !important;
+  /* transition: all 1s !important; */
   background-color: #1d2024;
   position: absolute;
   top: 40px;
+  animation: navAnimation 1s cubic-bezier(0.74, -0.01, 0.35, 0.96) 100ms forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
+@keyframes navAnimation {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+    margin-top: 50px;
+  }
+}
+/* #mobileMenuIcon{
+  width: 30px;
+} */
+
+.mobile-menu{
+  width: 30px !important;
+}
 .mobile-menu-icon{
-  padding: 0px 15px 0px 16px;
+  display: none !important;
 }
 
+.mobile-menu-close-icon{
+  display: inline !important;
+  color: none !important;
+}
 
-@keyframes mobileAnimate {
+.mobileNavMain-close{
+  align-self: end;
+  animation: navCloseAnimation 1s cubic-bezier(0.74, -0.01, 0.35, 0.96) 100ms forwards;
+}
+
+@keyframes navCloseAnimation {
+  0%{
+    opacity: 1;
+    margin-top: 50px;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+  }
 }
