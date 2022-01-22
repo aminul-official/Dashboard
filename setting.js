@@ -1,15 +1,29 @@
 // Add active class to the current button (highlight it)
-var navMain = document.getElementById("navMain");
-var navItem = navMain.getElementsByClassName("nav-item");
-for (var i = 0; i < navItem.length; i++) {
-    navItem[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active-nav");
-  current[0].className = current[0].className.replace(" active-nav", "");
-  this.className += " active-nav";
-  });
+// var navMain = document.getElementById("navMain");
+// var navItem = navMain.getElementsByClassName("nav-item");
+// for (var i = 0; i < navItem.length; i++) {
+//     navItem[i].addEventListener("click", function() {
+//   var current = document.getElementsByClassName("active-nav");
+//   current[0].className = current[0].className.replace(" active-nav", "");
+//   this.className += " active-nav";
+//   });
+// }
+
+function activeClass(id,className){
+    var navMain = document.getElementById(id);
+    var navItem = navMain.getElementsByClassName(className);
+    for (var i = 0; i < navItem.length; i++) {
+        navItem[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active-nav");
+      current[0].className = current[0].className.replace(" active-nav", "");
+      this.className += " active-nav";
+      });
+    }
 }
+activeClass("navMain","nav-item")
+activeClass("mobileNavMain","nav-item")
 
-
+// mobileNavMain
 // Open menu
 
 function openMenu() {
@@ -30,5 +44,5 @@ function mobileMenu() {
     console.log('working');
     var mobileNavMainx = document.getElementById("mobileNavMain");
     mobileNavMainx.classList.toggle('mobileNavMain-open');
-    // mobileNavMainx.classList.toggle('mobileNavMain-close');
+    mobileNavMainx.classList.toggle('mobileNavMain-close')
 }
