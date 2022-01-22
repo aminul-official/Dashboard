@@ -34,3 +34,22 @@ body {
   background-color: #2a2b31;
   opacity: 1 !important;
 }
+
+.mobileNavMain-open{
+  display: flex !important;
+  opacity:1 !important;
+  flex-direction: column;
+  height: fit-content !important;
+  transition: all 1s !important;
+  background-color: #1d2024;
+  position: absolute;
+  top: 40px;
+}
+
+.mobile-menu-icon{
+  padding: 0px 15px 0px 16px;
+}
+
+
+@keyframes mobileAnimate {
+}
