@@ -5,8 +5,7 @@ body {
   background-color: #18191c;
 }
 
-
-.chat-padding{
+.chat-padding {
   padding: 5px 7px;
 }
 
@@ -21,42 +20,43 @@ body {
   top: -8px;
   right: -7px;
 }
-.nav-item{
+.nav-item {
   opacity: 0.3;
 }
-.nav-item:hover{
+.nav-item:hover {
   opacity: 1;
 }
 
 /* active nav link style */
 
-.active-nav{
+.active-nav {
   background-color: #2a2b31;
   opacity: 1 !important;
 }
 
-.mobileNavMain-open{
+.mobileNavMain-open {
   display: flex !important;
-  opacity:0;
+  opacity: 0;
   flex-direction: column;
   height: fit-content !important;
   background-color: #1d2024;
   position: absolute;
   top: 40px;
-  animation: navAnimation 1s cubic-bezier(0.74, -0.01, 0.35, 0.96) 100ms forwards;
+  animation: navAnimation 1s cubic-bezier(0.74, -0.01, 0.35, 0.96) 100ms
+    forwards;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 @keyframes navAnimation {
-  0%{
+  0% {
     opacity: 0;
     transition: 0.3s;
   }
-  50%{
+  50% {
     opacity: 0.5;
     transition: 0.3s;
   }
-  100%{
+  100% {
     opacity: 1;
     margin-top: 50px;
     transition: 0.3s;
@@ -66,32 +66,63 @@ body {
   width: 30px;
 } */
 
-.mobile-menu{
+.mobile-menu {
   width: 30px !important;
 }
-.mobile-menu-icon{
+.mobile-menu-icon {
   display: none !important;
 }
 
-.mobile-menu-close-icon{
+.mobile-menu-close-icon {
   display: inline !important;
   color: none !important;
 }
 
-.mobileNavMain-close{
+.mobileNavMain-close {
   display: flex !important;
   position: absolute;
   animation: navCloseAnimation 3s;
 }
 
 @keyframes navCloseAnimation {
-  0%{
+  0% {
     margin-top: 50px;
   }
-  50%{
+  50% {
     margin-top: 25px;
   }
-  100%{
+  100% {
     margin-top: 0px;
   }
+}
+
+@layer components {
+  .x-grid {
+    @apply h-16 w-16 bg-green-600;
+  }
+}
+
+.top-bar-search-icon {
+  top: 8px;
+  right: 81px;
+}
+
+.top-bar-search-input:focus {
+  outline: none;
+}
+
+/* clears the 'X' from Internet Explorer */
+input.top-bar-search-input[type="search"]::-ms-clear,
+input.top-bar-search-input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input.top-bar-search-input[type="search"]::-webkit-search-decoration,
+input.top-bar-search-input[type="search"]::-webkit-search-cancel-button,
+input.top-bar-search-input[type="search"]::-webkit-search-results-button,
+input.top-bar-search-input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }
