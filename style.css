@@ -126,3 +126,13 @@ input.top-bar-search-input[type="search"]::-webkit-search-results-button,
 input.top-bar-search-input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
+
+.support-div-n-icon {
+  /* padding-ri: 72px !important; */
+}
+
+.exclamatory-icon {
+  font-size: 15px;
+  padding: 0px 9px;
+  font-weight: 700;
+}
