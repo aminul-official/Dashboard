@@ -12,6 +12,13 @@
     <script>
       tailwind.config = {
         theme: {
+          screens: {
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+            '2xl': '1536px',
+          },
           extend: {
             colors: {
               current: "currentcolor",
@@ -23,6 +30,11 @@
               supportIcon:"#3f3f48",
               exclamatory:"#6f6f76"
             },
+            screens:{
+            '3xl': '1600px',
+            '4xl':'1920px',
+            '5xl':'2560px',
+            }
           },
         },
       };
@@ -34,7 +46,7 @@
 
   <body class="bg-main flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row">
     <aside
-      class="bg-main sm:bg-main md:bg-sidebar lg:bg-sidebar xl:bg-sidebar 2xl:bg-sidebar w-screen sm:w-screen md:h-screen lg:h-screen xl:h-screen 2xl:h-screen h-fit sm:h-fit md:w-fit lg:w-fit xl:w-fit 2xl:w-fit flex flex-row sm:flex-row md:flex-col lg:flex-col xl:flex-col 2xl:flex-col md:items-center lg:items-center xl:items-center 2xl:items-center justify-between sm:justify-between md:justify-around lg:justify-around xl:justify-around 2xl:justify-around md:shadow-xl lg:shadow-xl xl:shadow-xl 2xl:shadow-xl p-5 sm:p-5 md:p-0 lg:p-0 xl:p-0 2xl:p-0 sticky top-0"
+      class="bg-main sm:bg-main md:bg-sidebar lg:bg-sidebar xl:bg-sidebar 2xl:bg-sidebar w-screen sm:w-screen md:h-screen lg:h-screen xl:h-screen 2xl:h-screen 3xl:h-screen h-fit sm:h-fit md:w-fit lg:w-fit xl:w-fit 2xl:w-fit flex flex-row sm:flex-row md:flex-col lg:flex-col xl:flex-col 2xl:flex-col md:items-center lg:items-center xl:items-center 2xl:items-center justify-between sm:justify-between md:justify-around lg:justify-around xl:justify-around 2xl:justify-around md:shadow-xl lg:shadow-xl xl:shadow-xl 2xl:shadow-xl p-5 sm:p-5 md:p-0 lg:p-0 xl:p-0 2xl:p-0 sticky top-0"
     >
       <div class="mt-1 sm:mt-1 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0">
         <a
@@ -209,41 +221,89 @@
     </aside>
     <section id="dashboard" class="p-6 h-screen w-screen flex flex-col">
       <div class="top-bar hidden sm:hidden md:flex lg:flex xl:flex 2xl:flex h-14 w-full text-white mb-5 flex justify-between items-center">
-        <div class="md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl">Dashboard</div>
-        <div class="w-44 sm:w-48 md:w-44 lg:w-56 xl:w-60 2xl:w-64">
-          <!-- <input placeholder="Search" class="h-full " type="search"> -->
-          <div class="relative mr-6 my-2">
-            <input type="search" class="top-bar-search-input bg-activeNhover shadow rounded-sm border-0 w-44 sm:w-48 md:w-44 lg:w-56 xl:w-60 2xl:w-64 pl-2.5 py-1 sm:py-1.5 md:py-1 lg:py-1 xl:py-2 2xl:py-2" placeholder="Search...">
-            <div class="absolute pin-r pin-t text-purple-lighter top-1 lg:top-1 xl:top-1.5 -right-3 top-bar-search-icon font-semibold">
-              <i class="lni lni-search-alt text-exclamatory text-xs sm:text-sm md:text-base lg:text-base xl:text-lg 2xl:text-xl"></i>
+        <div class="flex items-center">
+          <span class="md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl">Dashboard</span>
+          <div class="">
+            <!-- <input placeholder="Search" class="h-full " type="search"> -->
+            <div class="relative lg:ml-20 xl:ml-28 2xl:ml-32 3xl:ml-40 4xl:ml-52 5xl:ml-64">
+              <input type="search" class="top-bar-search-input bg-activeNhover shadow rounded-sm border-0 w-44 sm:w-48 md:w-44 lg:w-56 xl:w-60 2xl:w-64 pl-2.5 py-1 sm:py-1.5 md:py-1 lg:py-1 xl:py-2 2xl:py-2" placeholder="Search...">
+              <div class="absolute pin-r pin-t text-purple-lighter top-1 lg:top-1 xl:top-1.5 right-1 top-bar-search-icon font-semibold">
+                <i class="lni lni-search-alt text-exclamatory text-xs sm:text-sm md:text-base lg:text-base xl:text-lg 2xl:text-xl"></i>
+              </div>
             </div>
           </div>
         </div>
-        <div class="flex items-center">
-          <!-- <div class="support-div-n-icon inline px-2.5 py-2 pr-10 bg-activeNhover mr-2 rounded-sm relative">
-            <i class="lni lni-warning text-supportIcon text-2xl"></i>
-            <span class="font-semibold absolute top-1">Support</span>
-          </div> -->
-          <div class="bg-activeNhover flex items-center justify-center mr-2 py-1.5 px-3 xl:py-1 2xl:py-1 rounded-sm">
-            <span class="exclamatory-icon text-exclamatory bg-supportIcon mr-2.5 rounded-full text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base 2xl:text-xl md:px-2 lg:px-2 xl:px-2.5 2xl:px-3">!</span>
-            <span class="md:mb-0.5 lg:mb-0.5 xl:mb-1 2xl:mb-1 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-base 2xl:text-lg">Support</span>
+        <div  class="flex items-center">
+          <div class="flex items-center lg:mr-[40px] xl:mr-[140px] 2xl:mr-[155px] 3xl:mr-[186px] 4xl:mr-[255px] 5xl:mr-[380px]">
+            <!-- <div class="support-div-n-icon inline px-2.5 py-2 pr-10 bg-activeNhover mr-2 rounded-sm relative">
+              <i class="lni lni-warning text-supportIcon text-2xl"></i>
+              <span class="font-semibold absolute top-1">Support</span>
+            </div> -->
+            <div class="bg-activeNhover flex items-center justify-center mr-2 py-1.5 px-3 xl:py-1 2xl:py-1 rounded-sm">
+              <span class="exclamatory-icon text-exclamatory bg-supportIcon mr-2.5 rounded-full text-xs sm:text-sm md:text-sm lg:text-sm xl:text-base 2xl:text-xl md:px-2 lg:px-2 xl:px-2.5 2xl:px-3">!</span>
+              <span class="md:mb-0.5 lg:mb-0.5 xl:mb-1 2xl:mb-1 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-base 2xl:text-lg">Support</span>
+            </div>
+            <div class="inline border-2 text-supportIcon border-supportIcon px-1 sm:px-1.5 md:px-2 lg:px-2 xl:px-2.5 2xl:px-2.5 md:py-0.5 lg:py-0.5 xl:py-0.5 2xl:py-1 rounded-sm">
+              <i class="lni lni-plus text-xs sm:text-sm md:text-base lg:text-base xl:text-lg 2xl:text-xl"></i>
+            </div>
           </div>
-          <div class="inline border-2 text-supportIcon border-supportIcon px-1 sm:px-1.5 md:px-2 lg:px-2 xl:px-2.5 2xl:px-2.5 md:py-0.5 lg:py-0.5 xl:py-0.5 2xl:py-1 rounded-sm">
-            <i class="lni lni-plus text-xs sm:text-sm md:text-base lg:text-base xl:text-lg 2xl:text-xl"></i>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <div>
-            <i class="lni lni-menu text-exclamatory"></i>
-          </div>
-          <span class="font-normal mx-3 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-base 2xl:text-lg">Nikita Resheteev</span>
-          <div class="inline border-2 text-supportIcon border-supportIcon px-1 sm:px-1.5 md:px-2 lg:px-2 xl:px-2.5 2xl:px-2.5 md:py-0.5 lg:py-0.5 xl:py-0.5 2xl:py-1 rounded-sm">
-            <i class="lni lni-user text-xs sm:text-sm md:text-base lg:text-base xl:text-lg 2xl:text-xl"></i>
+          <div class="flex items-center justify-between w-56 md:w-44 lg:w-48">
+            <div>
+              <i class="lni lni-menu text-exclamatory"></i>
+            </div>
+            <span class="font-normal mx-3 md:mx-2 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-base 2xl:text-lg">Nikita Resheteev</span>
+            <div class="inline border-2 text-supportIcon border-supportIcon px-1 sm:px-1.5 md:px-2 lg:px-2 xl:px-2.5 2xl:px-2.5 md:py-0.5 lg:py-0.5 xl:py-0.5 2xl:py-1 rounded-sm">
+              <i class="lni lni-user text-xs sm:text-sm md:text-base lg:text-base xl:text-lg 2xl:text-xl"></i>
+            </div>
           </div>
         </div>
       </div>
-      <div class="dashboard-content  bg-red-500 h-full w-full text-white">
-        This is Dashboard 
+      <div class="dashboard-content h-full w-full text-white grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[472px,1fr] lg:grid-cols-[680px,1fr] xl:grid-cols-[945px,1fr] 2xl:grid-cols-[1016px,1fr] 3xl:grid-cols-[1050px,1fr] 4xl:grid-cols-[1300px,1fr] 5xl:grid-cols-[1814px,1fr] grid-rows-2 lg:grid-rows-[380px,1fr] 2xl:grid-rows-[370px,1fr] 3xl:grid-rows-[380px,1fr] 4xl:grid-rows-2 5xl:grid-rows-[540px,1fr]">
+        <div class="wallets-main grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[190px,1fr] lg:grid-cols-[230px,1fr] xl:grid-cols-[295px,1fr] 2xl:grid-cols-[340px,1fr] 3xl:grid-cols-[375px,1fr] 4xl:grid-cols-[410px,1fr] 5xl:grid-cols-[465px,1fr]">
+          <div class="transaction-balance-overview grid grid-rows-[40px,1fr]">
+            <div>
+              <span>Overview</span>              
+            </div>
+            <div class="bg-gray-500 h-full">
+              Transactions and Balance
+            </div>
+          </div>
+          <div class="my-wallets grid grid-rows-[40px,1fr]">
+            <div class="flex justify-between">
+              <span>My Wallets</span>
+              <span>Add wallet</span>
+            </div>
+            <div class="h-full grid gap-5 lg:grid-rows-[100px,1fr] xl:grid-rows-[100px,1fr] 2xl:grid-rows-[105px,1fr] 3xl:grid-rows-[108px,1fr] 4xl:grid-rows-[125px,1fr] 5xl:grid-rows-[160px,1fr]">
+              <div class="grid gap-5 md:grid-cols-[1fr,1fr,1fr,1fr] lg:grid-cols-[160px,1fr,1fr,1fr] xl:grid-cols-[180px,1fr,1fr,1fr] 2xl:grid-cols-[200px,1fr,1fr,1fr] 3xl:grid-cols-[240px,1fr,1fr,1fr] 4xl:grid-cols-[240px,1fr,1fr,1fr] 5xl:grid-cols-[460px,1fr,1fr,1fr]">
+                <div class="bg-orange-500">
+                  <span>Bitcoin</span>
+                </div>
+                <div class="bg-purple-500">
+                  <span>Ethereum</span>
+                </div>
+                <div class="bg-pink-900">
+                  <span>Litcoin</span>
+                </div>
+                <div class="bg-yellow-500">
+                  <span>Dash</span>
+                </div>
+              </div>
+              <div class="grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[1fr,1fr]  lg:grid-cols-[205px,1fr] xl:grid-cols-[255px,1fr] 2xl:grid-cols-[275px,1fr] 3xl:grid-cols-[310px,1fr] 4xl:grid-cols-[325px,1fr] 5xl:grid-cols-[600px,1fr]  grid-rows-1">
+                <div class="bg-red-500 h-full">
+                  <span>Progress</span>
+                </div>
+                <div class="bg-blue-200">
+                  <span>Wallet</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bitcoin-chart-main grid gap-5 grid-cols-[200px,1fr] md:grid-cols-[300px,1fr] lg:grid-cols-[450px,1fr] xl:grid-cols-[650px,1fr] 2xl:grid-cols-[700px,1fr] 3xl:grid-cols-[765px,1fr] 4xl:grid-cols-[900px,1fr] 5xl:grid-cols-[1270px,1fr] grid-rows-1">
+          <div class="bg-green-500"></div>
+          <div class="bg-blue-500"></div>
+        </div>
+        <div class="transactions-main bg-pink-500 col-start-1 sm:col-start-1 md:col-start-2 lg:col-start-2 xl:col-start-2 2xl:col-start-2 3xl:col-start-2 4xl:col-start-2 5xl:col-start-2 row-start-1 row-end-3 mt-10">Transactions</div>
       </div>
     </section>
     <script src="./setting.js"></script>
