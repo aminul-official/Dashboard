@@ -13,6 +13,7 @@
       tailwind.config = {
         theme: {
           screens: {
+            'xs':'320px',
             'sm': '640px',
             'md': '768px',
             'lg': '1024px',
@@ -28,7 +29,7 @@
               disableLink: "#43444a",
               chat: "#4c4d55",
               supportIcon:"#3f3f48",
-              exclamatory:"#6f6f76"
+              exclamatory:"#6f6f76",
             },
             screens:{
             '3xl': '1600px',
@@ -225,7 +226,7 @@
           <span class="md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl">Dashboard</span>
           <div class="">
             <!-- <input placeholder="Search" class="h-full " type="search"> -->
-            <div class="relative lg:ml-20 xl:ml-28 2xl:ml-32 3xl:ml-40 4xl:ml-52 5xl:ml-64">
+            <div class="relative md:ml-5 lg:ml-20 xl:ml-28 2xl:ml-32 3xl:ml-40 4xl:ml-52 5xl:ml-64">
               <input type="search" class="top-bar-search-input bg-activeNhover shadow rounded-sm border-0 w-44 sm:w-48 md:w-44 lg:w-56 xl:w-60 2xl:w-64 pl-2.5 py-1 sm:py-1.5 md:py-1 lg:py-1 xl:py-2 2xl:py-2" placeholder="Search...">
               <div class="absolute pin-r pin-t text-purple-lighter top-1 lg:top-1 xl:top-1.5 right-1 top-bar-search-icon font-semibold">
                 <i class="lni lni-search-alt text-exclamatory text-xs sm:text-sm md:text-base lg:text-base xl:text-lg 2xl:text-xl"></i>
@@ -234,7 +235,7 @@
           </div>
         </div>
         <div  class="flex items-center">
-          <div class="flex items-center lg:mr-[40px] xl:mr-[140px] 2xl:mr-[155px] 3xl:mr-[186px] 4xl:mr-[255px] 5xl:mr-[380px]">
+          <div class="flex items-center md:mr-[20px] lg:mr-[40px] xl:mr-[140px] 2xl:mr-[155px] 3xl:mr-[186px] 4xl:mr-[255px] 5xl:mr-[380px]">
             <!-- <div class="support-div-n-icon inline px-2.5 py-2 pr-10 bg-activeNhover mr-2 rounded-sm relative">
               <i class="lni lni-warning text-supportIcon text-2xl"></i>
               <span class="font-semibold absolute top-1">Support</span>
@@ -258,39 +259,111 @@
           </div>
         </div>
       </div>
-      <div class="dashboard-content h-full w-full text-white grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[472px,1fr] lg:grid-cols-[680px,1fr] xl:grid-cols-[945px,1fr] 2xl:grid-cols-[1016px,1fr] 3xl:grid-cols-[1050px,1fr] 4xl:grid-cols-[1300px,1fr] 5xl:grid-cols-[1814px,1fr] grid-rows-2 lg:grid-rows-[380px,1fr] 2xl:grid-rows-[370px,1fr] 3xl:grid-rows-[380px,1fr] 4xl:grid-rows-2 5xl:grid-rows-[540px,1fr]">
+      <div class="dashboard-content h-full w-full text-white grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[467px,1fr] lg:grid-cols-[680px,1fr] xl:grid-cols-[977px,1fr] 2xl:grid-cols-[1048px,1fr] 3xl:grid-cols-[1080px,1fr] 4xl:grid-cols-[1332px,1fr] 5xl:grid-cols-[1847px,1fr] grid-rows-auto sm:grid-rows-auto lg:grid-rows-[380px,1fr] 2xl:grid-rows-[370px,1fr] 3xl:grid-rows-[380px,1fr] 4xl:grid-rows-2 5xl:grid-rows-[540px,1fr]">
         <div class="wallets-main grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[190px,1fr] lg:grid-cols-[230px,1fr] xl:grid-cols-[295px,1fr] 2xl:grid-cols-[340px,1fr] 3xl:grid-cols-[375px,1fr] 4xl:grid-cols-[410px,1fr] 5xl:grid-cols-[465px,1fr]">
           <div class="transaction-balance-overview grid grid-rows-[40px,1fr]">
             <div>
               <span>Overview</span>              
             </div>
-            <div class="bg-gray-500 h-full">
-              Transactions and Balance
+            <div class="bg-activeNhover text-white flex flex-col p-5 rounded-sm">
+              <div class="flex justify-between">
+                <div>
+                  <h1 class="text-4xl mt-2">2,345</h1>
+                  <!-- <span class="text-[#3b3c44]">Transactions</span> -->
+                  <span class="text-[#606060] text-sm">Transactions</span>
+                </div>
+                <div>
+                  <div class="px-3 py-2 bg-[#242528] rounded">
+                    <h1 class="text-4xl ml-2">5</h1>
+                    <p>Wallets</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-10">
+                <p class="text-sm text-[#9f9f9f] font-normal">Current balance</p>
+                <h1 class="h-20 text-5xl mt-2">3.4330<sup class="text-xs align-top text-[#5e5e5e] font-extrabold ml-1">USD</sup></h1>
+              </div>
+              <div class="flex justify-between">
+                <p>2.7995 EUR <span class="text-[#a6d345] font-medium">+12%</span></p>
+                <div class="border-2 border-[#7ac230] pl-[18px] pr-[17px] pb-[2px] rounded-3xl">
+                  <span>buy</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="my-wallets grid grid-rows-[40px,1fr]">
             <div class="flex justify-between">
-              <span>My Wallets</span>
-              <span>Add wallet</span>
+              <span class="text-lg">My Wallets</span>
+              <span class="text-sm mt-1 sm:mt-2 text-[#73b730] font-medium">Add wallet</span>
             </div>
-            <div class="h-full grid gap-5 lg:grid-rows-[100px,1fr] xl:grid-rows-[100px,1fr] 2xl:grid-rows-[105px,1fr] 3xl:grid-rows-[108px,1fr] 4xl:grid-rows-[125px,1fr] 5xl:grid-rows-[160px,1fr]">
-              <div class="grid gap-5 md:grid-cols-[1fr,1fr,1fr,1fr] lg:grid-cols-[160px,1fr,1fr,1fr] xl:grid-cols-[180px,1fr,1fr,1fr] 2xl:grid-cols-[200px,1fr,1fr,1fr] 3xl:grid-cols-[240px,1fr,1fr,1fr] 4xl:grid-cols-[240px,1fr,1fr,1fr] 5xl:grid-cols-[460px,1fr,1fr,1fr]">
-                <div class="bg-orange-500">
-                  <span>Bitcoin</span>
-                </div>
-                <div class="bg-purple-500">
-                  <span>Ethereum</span>
-                </div>
-                <div class="bg-pink-900">
-                  <span>Litcoin</span>
-                </div>
-                <div class="bg-yellow-500">
-                  <span>Dash</span>
+            <div class="h-full mt-2 sm:mt-2 grid gap-5 grid-rows-[130px,1fr] sm:grid-rows-[130px,1fr] lg:grid-rows-[100px,1fr] xl:grid-rows-[100px,1fr] 2xl:grid-rows-[105px,1fr] 3xl:grid-rows-[108px,1fr] 4xl:grid-rows-[125px,1fr] 5xl:grid-rows-[160px,1fr]">
+              <div class="relative overflow-x-scroll">
+                <div class="absolute grid gap-5 xs:grid-cols-[238px,165px,165px,165px] sm:grid-cols-[270px,165px,165px,165px] md:grid-cols-[1fr,1fr,1fr,1fr] lg:grid-cols-[160px,1fr,1fr,1fr] xl:grid-cols-[180px,1fr,1fr,1fr] 2xl:grid-cols-[200px,1fr,1fr,1fr] 3xl:grid-cols-[240px,1fr,1fr,1fr] 4xl:grid-cols-[240px,1fr,1fr,1fr] 5xl:grid-cols-[460px,1fr,1fr,1fr]">
+                  <div class="bg-[#79c131] rounded-sm flex flex-col justify-between p-3">
+                    <div class="flex justify-between">
+                      <span class="font-semibold text-[#65a028] mt-3">BTC</span>
+                      <div class="bg-[#64a028] py-2 px-3 rounded-sm font-semibold">
+                        <i class="lni lni-bitcoin text-xl font-extrabold rotate-12"></i>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-end mt-5">
+                      <p class="text-2xl tracking-wide">Bitcoin</p>
+                      <p class="xs:text-3xl sm:text-4xl tracking-wide">0.221746</p>
+                    </div>
+                  </div>
+                  <div class="bg-sidebar rounded-sm flex flex-col justify-between p-3">
+                    <div class="flex justify-between">
+                      <span class="font-semibold text-[#3a3c43] mt-3">ETH</span>
+                      <div class="bg-[#3a3b43] py-2 px-3 rounded-sm font-semibold">
+                        <i class="lni lni-diamond-alt text-xl font-extrabold"></i>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-end mt-5">
+                      <p class="text-2xl tracking-wide ml-3">Ethereum</p>
+                    </div>
+                  </div>
+                  <div class="bg-sidebar rounded-sm flex flex-col justify-between p-3">
+                    <div class="flex justify-between">
+                      <span class="font-semibold text-[#3a3c43] mt-3">LTC</span>
+                      <div class="bg-[#3a3b43] py-2 px-3 rounded-sm font-semibold">
+                        <i class="lni lni-coin text-xl font-extrabold"></i>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-end mt-5">
+                      <p class="text-2xl tracking-wide  ml-3">Litecoin</p>
+                    </div>
+                  </div>
+                  <div class="bg-sidebar rounded-sm flex flex-col justify-between p-3">
+                    <div class="flex justify-between">
+                      <span class="font-semibold text-[#3a3c43] mt-3">Dash</span>
+                      <div class="bg-[#3a3b43] py-2 px-3 rounded-sm font-semibold">
+                        <i class="lni lni-dashboard text-xl font-extrabold"></i>
+                      </div>
+                    </div>
+                    <div class="flex justify-between items-end mt-5">
+                      <p class="text-2xl tracking-wide  ml-3">Dash</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[1fr,1fr]  lg:grid-cols-[205px,1fr] xl:grid-cols-[255px,1fr] 2xl:grid-cols-[275px,1fr] 3xl:grid-cols-[310px,1fr] 4xl:grid-cols-[325px,1fr] 5xl:grid-cols-[600px,1fr]  grid-rows-1">
                 <div class="bg-red-500 h-full">
-                  <span>Progress</span>
+                  <div class="flex justify-between">
+                    <div>
+                      sdkfj
+                    </div>
+                    <h2>81%</h2>
+                    <span>Bitcoin</span>
+                    <div>
+                      <i class="lni lni-more-alt rotate-90"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span>Ethereum</span>
+                  </div>
+                  <div>
+                    <span>Litecoin</span>
+                  </div>
                 </div>
                 <div class="bg-blue-200">
                   <span>Wallet</span>
@@ -299,13 +372,15 @@
             </div>
           </div>
         </div>
-        <div class="bitcoin-chart-main grid gap-5 grid-cols-[200px,1fr] md:grid-cols-[300px,1fr] lg:grid-cols-[450px,1fr] xl:grid-cols-[650px,1fr] 2xl:grid-cols-[700px,1fr] 3xl:grid-cols-[765px,1fr] 4xl:grid-cols-[900px,1fr] 5xl:grid-cols-[1270px,1fr] grid-rows-1">
+        <div class="bitcoin-chart-main grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[300px,1fr] lg:grid-cols-[450px,1fr] xl:grid-cols-[650px,1fr] 2xl:grid-cols-[700px,1fr] 3xl:grid-cols-[765px,1fr] 4xl:grid-cols-[900px,1fr] 5xl:grid-cols-[1270px,1fr] grid-rows-2 sm:grid-rows-2">
           <div class="bg-green-500"></div>
           <div class="bg-blue-500"></div>
         </div>
-        <div class="transactions-main bg-pink-500 col-start-1 sm:col-start-1 md:col-start-2 lg:col-start-2 xl:col-start-2 2xl:col-start-2 3xl:col-start-2 4xl:col-start-2 5xl:col-start-2 row-start-1 row-end-3 mt-10">Transactions</div>
+        <div class="transactions-main bg-pink-500 col-start-1 sm:col-start-1 md:col-start-2 lg:col-start-2 xl:col-start-2 2xl:col-start-2 3xl:col-start-2 4xl:col-start-2 5xl:col-start-2 row-start-3 sm:row-start-3 md:row-start-1 lg:row-start-1 xl:row-start-1 2xl:row-start-1 3xl:row-start-1 4xl:row-start-1 5xl:row-start-1  md:row-end-3 lg:row-end-3 xl:row-end-3 2xl:row-end-3 3xl:row-end-3 4xl:row-end-3 5xl:row-end-3 mt-10">Transactions</div>
       </div>
     </section>
+
+    
     <script src="./setting.js"></script>
   </body>
 </html>
