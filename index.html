@@ -47,7 +47,7 @@
 
   <body class="bg-main flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row">
     <aside
-      class="bg-main sm:bg-main md:bg-sidebar lg:bg-sidebar xl:bg-sidebar 2xl:bg-sidebar w-screen sm:w-screen md:h-screen lg:h-screen xl:h-screen 2xl:h-screen 3xl:h-screen h-fit sm:h-fit md:w-fit lg:w-fit xl:w-fit 2xl:w-fit flex flex-row sm:flex-row md:flex-col lg:flex-col xl:flex-col 2xl:flex-col md:items-center lg:items-center xl:items-center 2xl:items-center justify-between sm:justify-between md:justify-around lg:justify-around xl:justify-around 2xl:justify-around md:shadow-xl lg:shadow-xl xl:shadow-xl 2xl:shadow-xl p-5 sm:p-5 md:p-0 lg:p-0 xl:p-0 2xl:p-0 sticky top-0"
+      class="bg-main sm:bg-main md:bg-sidebar lg:bg-sidebar xl:bg-sidebar 2xl:bg-sidebar w-screen sm:w-screen md:h-screen lg:h-screen xl:h-screen 2xl:h-screen 3xl:h-screen h-fit sm:h-fit md:w-fit lg:w-fit xl:w-fit 2xl:w-fit flex flex-row sm:flex-row md:flex-col lg:flex-col xl:flex-col 2xl:flex-col md:items-center lg:items-center xl:items-center 2xl:items-center justify-between sm:justify-between md:justify-around lg:justify-around xl:justify-around 2xl:justify-around md:shadow-xl lg:shadow-xl xl:shadow-xl 2xl:shadow-xl p-5 sm:p-5 md:p-0 lg:p-0 xl:p-0 2xl:p-0 sticky top-0 z-10"
     >
       <div class="mt-1 sm:mt-1 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0">
         <a
@@ -285,7 +285,7 @@
               </div>
               <div class="flex justify-between">
                 <p>2.7995 EUR <span class="text-[#a6d345] font-medium">+12%</span></p>
-                <div class="border-2 border-[#7ac230] pl-[18px] pr-[17px] pb-[2px] rounded-3xl">
+                <div class="border-2 border-[#7ac230] hover:bg-[#7ac230] pl-[18px] pr-[17px] pb-[2px] rounded-3xl">
                   <span>buy</span>
                 </div>
               </div>
@@ -346,27 +346,123 @@
                   </div>
                 </div>
               </div>
-              <div class="grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[1fr,1fr]  lg:grid-cols-[205px,1fr] xl:grid-cols-[255px,1fr] 2xl:grid-cols-[275px,1fr] 3xl:grid-cols-[310px,1fr] 4xl:grid-cols-[325px,1fr] 5xl:grid-cols-[600px,1fr]  grid-rows-1">
-                <div class="bg-red-500 h-full">
-                  <div class="flex justify-between">
+              <div class="grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[1fr,1fr]  lg:grid-cols-[205px,1fr] xl:grid-cols-[255px,1fr] 2xl:grid-cols-[275px,1fr] 3xl:grid-cols-[310px,1fr] 4xl:grid-cols-[325px,1fr] 5xl:grid-cols-[600px,1fr]  grid-rows-[1fr,1fr] xs:grid-rows-[1fr,1fr] sm:grid-rows-[1fr,1fr] md:grid-rows-1 lg:grid-rows-1 xl:grid-rows-1 2xl:grid-rows-1 3xl:grid-rows-1 4xl:grid-rows-1 5xl:grid-rows-1">
+                <div class="bg-sidebar h-full p-3 flex flex-col justify-around">
+                  <div class="flex justify-between items-center">
                     <div>
-                      sdkfj
+                      <div class="flex justify-center items-center space-x-2 ">
+                        <div class="
+                          spinner-border
+                          animate-spin
+                          inline-block
+                          w-8
+                          h-8
+                          border-4
+                          border-[#79c131]
+                          rounded-full
+                          text-green-500
+                        " role="status">
+                          <span class="hidden">Loading...</span>
+                        </div>
+                      </div>
                     </div>
-                    <h2>81%</h2>
-                    <span>Bitcoin</span>
+                    <h2  class="w-16 text-2xl">81%</h2>
+                    <span class="w-20  text-sm text text-[#686868] ">Bitcoin</span>
                     <div>
-                      <i class="lni lni-more-alt rotate-90"></i>
+                      <i class="lni lni-more-alt rotate-90 text-[#3c3c3c]"></i>
                     </div>
                   </div>
-                  <div>
-                    <span>Ethereum</span>
+                  <div class="flex justify-between items-center my-2">
+                    <div>
+                      <div class="flex justify-center items-center space-x-2 ">
+                        <div class="
+                          spinner-border
+                          animate-spin
+                          inline-block
+                          w-8
+                          h-8
+                          border-4
+                          border-[#79c131]
+                          rounded-full
+                          text-green-500
+                        " role="status">
+                          <span class="hidden">Loading...</span>
+                        </div>
+                      </div>
+                    </div>
+                    <h2  class="w-16 text-2xl">12%</h2>
+                    <span class="w-20 text-sm text-[#686868]  ">Ethereum</span>
+                    <div>
+                      <i class="lni lni-more-alt rotate-90 text-[#3c3c3c]"></i>
+                    </div>
                   </div>
-                  <div>
-                    <span>Litecoin</span>
+                  <div class="flex justify-between  items-center">
+                    <div>
+                      <div class="flex justify-center items-center space-x-2 ">
+                        <div class="
+                          spinner-border
+                          animate-spin
+                          inline-block
+                          w-8
+                          h-8
+                          border-4
+                          border-[#79c131]
+                          rounded-full
+                          text-green-500
+                        " role="status">
+                          <span class="hidden">Loading...</span>
+                        </div>
+                      </div>
+                    </div>
+                    <h2  class="w-16 text-2xl">7%</h2>
+                    <span  class="w-20  text-sm text-[#686868]">Litecoin</span>
+                    <div>
+                      <i class="lni lni-more-alt rotate-90 text-[#3c3c3c]"></i>
+                    </div>
                   </div>
                 </div>
-                <div class="bg-blue-200">
-                  <span>Wallet</span>
+                <div class="bg-sidebar p-3 flex flex-col justify-between rounded-sm">
+                  <div class="flex justify-between items-center">
+                    <div class="flex justify-between items-center">
+                      <span class="text-xs font-medium">WALLET</span>
+                      <div class="relative inline-flex ml-[15px]">
+                        <div class="absolute flex flex-col text-[8px] right-2 top-[7px]">
+                          <i class="lni lni-chevron-up text-[#7e7e7e]"></i>
+                          <i class="lni lni-chevron-down text-[#7e7e7e]"></i>
+                        </div>
+                        <select class="text-sm text-white px-2 h-[28px] bg-activeNhover hover:border-blue-500 focus:outline-none appearance-none rounded-sm">
+                          <option selected>BTC</option>
+                          <option>ETH</option>
+                          <option>LTC</option>
+                          <option>DASH</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="flex items-center">
+                      <span class="text-xs font-medium mr-3">
+                        AMOUNT
+                      </span>
+                      <div class="">
+                        <input type="number" placeholder="$" name="" id="" class="w-16 bg-activeNhover pt-[2px] pb-[3px] pl-[5px] rounded-sm focus:outline-none">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <span class="text-xs font-medium">SEND TO</span>
+                    </div>
+                    <div>
+                      <input placeholder="type here" class="bg-activeNhover rounded-sm px-1 pb-1 focus:outline-none " type="text">
+                    </div>
+                  </div>
+                  <div class="flex justify-end">
+                    <div class="mr-7">
+                      <span class="text-sm text-[#686868]">Receive Bitcoin</span>
+                    </div>
+                    <div class="border-2 border-[#3f3f48] hover:border-[#7ac230] hover:bg-[#7ac230] pl-[18px] pr-[17px] pb-[2px] rounded-3xl">
+                      <span>send</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -376,11 +472,48 @@
           <div class="bg-green-500"></div>
           <div class="bg-blue-500"></div>
         </div>
-        <div class="transactions-main bg-pink-500 col-start-1 sm:col-start-1 md:col-start-2 lg:col-start-2 xl:col-start-2 2xl:col-start-2 3xl:col-start-2 4xl:col-start-2 5xl:col-start-2 row-start-3 sm:row-start-3 md:row-start-1 lg:row-start-1 xl:row-start-1 2xl:row-start-1 3xl:row-start-1 4xl:row-start-1 5xl:row-start-1  md:row-end-3 lg:row-end-3 xl:row-end-3 2xl:row-end-3 3xl:row-end-3 4xl:row-end-3 5xl:row-end-3 mt-10">Transactions</div>
+        <div class="transactions-main bg-pink-500 col-start-1 sm:col-start-1 md:col-start-2 lg:col-start-2 xl:col-start-2 2xl:col-start-2 3xl:col-start-2 4xl:col-start-2 5xl:col-start-2 row-start-3 sm:row-start-3 md:row-start-1 lg:row-start-1 xl:row-start-1 2xl:row-start-1 3xl:row-start-1 4xl:row-start-1 5xl:row-start-1  md:row-end-3 lg:row-end-3 xl:row-end-3 2xl:row-end-3 3xl:row-end-3 4xl:row-end-3 5xl:row-end-3 mt-10">
+          <div class="flex flex-col p-3 bg-sidebar">
+            <div class="flex justify-between">
+              <div>
+                <span>Transactions</span>
+              </div>
+              <div>
+                <span class="text-xs">ALL</span>
+                <span  class="text-xs">SEND</span>
+                <span  class="text-xs">RECENT</span>
+              </div>
+            </div>
+            <div class="mt-3 ">
+              <div class="mt-3 p-2  bg-activeNhover rounded-sm overflow-hidden">
+                <div class="flex justify-between items-center">
+                  <span class="text-xs">16:23, 12 dec 2018</span>
+                  <div>
+                    <i class="lni lni-arrow-right text-md text-[#7ac230]"></i>
+                    <span>0.009 BTC</span>
+                  </div>
+                </div>
+                <div class="overflow-hidden w-10">
+                  <span class="text-xs">23IJSD9DW0WJXCV33W0WJXCV33W0WJXCV3350ASDF</span>
+                </div>
+              </div>
+              <div class="mt-3 p-2  bg-activeNhover rounded-sm overflow-hidden">
+                <div class="flex justify-between items-center">
+                  <span class="text-xs">16:23, 12 dec 2018</span>
+                  <div>
+                    <i class="lni lni-arrow-right text-md text-[#7ac230]"></i>
+                    <span>0.009 BTC</span>
+                  </div>
+                </div>
+                <div class="overflow-hidden">
+                  <span class="text-xs">23IJSD9DW0WJXCV3350ASDF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-    
     <script src="./setting.js"></script>
   </body>
 </html>
