@@ -220,7 +220,7 @@
       </div>
       </div>
     </aside>
-    <section id="dashboard" class="p-6 h-screen w-screen flex flex-col">
+    <section id="dashboard" class="p-6 md:h-screen lg:h-screen xl:h-screen 2xl:h-screen 3xl:h-screen 4xl:h-screen 5xl:h-screen w-screen flex flex-col">
       <div class="top-bar hidden sm:hidden md:flex lg:flex xl:flex 2xl:flex h-14 w-full text-white mb-5 flex justify-between items-center">
         <div class="flex items-center">
           <span class="md:text-xl lg:text-2xl xl:text-2xl 2xl:text-3xl">Dashboard</span>
@@ -297,7 +297,7 @@
               <span class="text-sm mt-1 sm:mt-2 text-[#73b730] font-medium">Add wallet</span>
             </div>
             <div class="h-full mt-2 sm:mt-2 grid gap-5 grid-rows-[130px,1fr] sm:grid-rows-[130px,1fr] lg:grid-rows-[100px,1fr] xl:grid-rows-[100px,1fr] 2xl:grid-rows-[105px,1fr] 3xl:grid-rows-[108px,1fr] 4xl:grid-rows-[125px,1fr] 5xl:grid-rows-[160px,1fr]">
-              <div class="relative overflow-x-scroll">
+              <div class="relative overflow-x-scroll no-scrollbar">
                 <div class="absolute grid gap-5 xs:grid-cols-[238px,165px,165px,165px] sm:grid-cols-[270px,165px,165px,165px] md:grid-cols-[1fr,1fr,1fr,1fr] lg:grid-cols-[160px,1fr,1fr,1fr] xl:grid-cols-[180px,1fr,1fr,1fr] 2xl:grid-cols-[200px,1fr,1fr,1fr] 3xl:grid-cols-[240px,1fr,1fr,1fr] 4xl:grid-cols-[240px,1fr,1fr,1fr] 5xl:grid-cols-[460px,1fr,1fr,1fr]">
                   <div class="bg-[#79c131] rounded-sm flex flex-col justify-between p-3">
                     <div class="flex justify-between">
@@ -469,32 +469,47 @@
           </div>
         </div>
         <div class="bitcoin-chart-main grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[300px,1fr] lg:grid-cols-[450px,1fr] xl:grid-cols-[650px,1fr] 2xl:grid-cols-[700px,1fr] 3xl:grid-cols-[765px,1fr] 4xl:grid-cols-[900px,1fr] 5xl:grid-cols-[1270px,1fr] grid-rows-2 sm:grid-rows-2">
-          <div class="bg-green-500"></div>
-          <div class="bg-blue-500"></div>
+          <div class="bg-green-500">
+            <div class="p-3 flex">
+              <div class="flex justify-between">
+                <h1>Bitcoin Chart</h1>
+                <div>
+                  <span>1m</span>
+                  <span>3m</span>
+                  <span>All</span>
+                  <i class="lni lni-more-alt rotate-90 text-[#3c3c3c]"></i>
+                </div>
+              </div>
+              <div></div>
+            </div>
+          </div>
+          <div class="bg-blue-500">
+            blue
+          </div>
         </div>
-        <div class="transactions-main bg-pink-500 col-start-1 sm:col-start-1 md:col-start-2 lg:col-start-2 xl:col-start-2 2xl:col-start-2 3xl:col-start-2 4xl:col-start-2 5xl:col-start-2 row-start-3 sm:row-start-3 md:row-start-1 lg:row-start-1 xl:row-start-1 2xl:row-start-1 3xl:row-start-1 4xl:row-start-1 5xl:row-start-1  md:row-end-3 lg:row-end-3 xl:row-end-3 2xl:row-end-3 3xl:row-end-3 4xl:row-end-3 5xl:row-end-3 mt-10">
-          <div class="flex flex-col p-3 bg-sidebar">
+        <div class="transactions-main bg-pink-500 col-start-1 sm:col-start-1 md:col-start-2 lg:col-start-2 xl:col-start-2 2xl:col-start-2 3xl:col-start-2 4xl:col-start-2 5xl:col-start-2 row-start-3 sm:row-start-3 md:row-start-1 lg:row-start-1 xl:row-start-1 2xl:row-start-1 3xl:row-start-1 4xl:row-start-1 5xl:row-start-1  md:row-end-3 lg:row-end-3 xl:row-end-3 2xl:row-end-3 3xl:row-end-3 4xl:row-end-3 5xl:row-end-3 mt-0 xs:mt-0 sm:mt-0 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-10 3xl:mt-10 4xl:mt-10 5xl:mt-10 grid grid-cols-[1fr]">
+          <div class="flex flex-col p-3 bg-sidebar overflow-hidden">
             <div class="flex justify-between">
               <div>
                 <span>Transactions</span>
               </div>
-              <div>
+              <div class="font-medium">
                 <span class="text-xs">ALL</span>
-                <span  class="text-xs">SEND</span>
-                <span  class="text-xs">RECENT</span>
+                <span  class="text-xs text-[#3a3c43]">SEND</span>
+                <span  class="text-xs text-[#3a3c43]">RECENT</span>
               </div>
             </div>
-            <div class="mt-3 ">
-              <div class="mt-3 p-2  bg-activeNhover rounded-sm overflow-hidden">
+            <div class="mt-3">
+              <div class="mt-3 p-2  bg-activeNhover rounded-sm">
                 <div class="flex justify-between items-center">
                   <span class="text-xs">16:23, 12 dec 2018</span>
                   <div>
                     <i class="lni lni-arrow-right text-md text-[#7ac230]"></i>
-                    <span>0.009 BTC</span>
+                    <span>0.009</span>
                   </div>
                 </div>
-                <div class="overflow-hidden w-10">
-                  <span class="text-xs">23IJSD9DW0WJXCV33W0WJXCV33W0WJXCV3350ASDF</span>
+                <div class="overflow-x-scroll no-scrollbar">
+                  <span class="text-xs text-[#686868]">23IJSD9DW0WJXCV33W0WJXCV33W0WJXCV3350ASDF</span>
                 </div>
               </div>
               <div class="mt-3 p-2  bg-activeNhover rounded-sm overflow-hidden">
@@ -502,11 +517,47 @@
                   <span class="text-xs">16:23, 12 dec 2018</span>
                   <div>
                     <i class="lni lni-arrow-right text-md text-[#7ac230]"></i>
-                    <span>0.009 BTC</span>
+                    <span>0.007 BTC</span>
                   </div>
                 </div>
-                <div class="overflow-hidden">
-                  <span class="text-xs">23IJSD9DW0WJXCV3350ASDF</span>
+                <div class="overflow-x-scroll no-scrollbar">
+                  <span class="text-xs text-[#686868]">23IJSD9DW0WJXCJSD9DW0WJXCV3350AV3350ASDF</span>
+                </div>
+              </div>
+              <div class="mt-3 p-2  bg-activeNhover rounded-sm overflow-hidden">
+                <div class="flex justify-between items-center">
+                  <span class="text-xs">16:23, 12 dec 2018</span>
+                  <div>
+                    <i class="lni lni-arrow-left text-md text-red-700"></i>
+                    <span>0.3 BTC</span>
+                  </div>
+                </div>
+                <div class="overflow-x-scroll no-scrollbar">
+                  <span class="text-xs text-[#686868]">23IJSD9DW0WJXCJSD9DW0WJXCV3350AV3350ASDF</span>
+                </div>
+              </div>
+              <div class="mt-3 p-2  bg-activeNhover rounded-sm overflow-hidden">
+                <div class="flex justify-between items-center">
+                  <span class="text-xs">16:23, 12 dec 2018</span>
+                  <div>
+                    <i class="lni lni-arrow-right text-md text-[#7ac230]"></i>
+                    <span>0.00945 BTC</span>
+                  </div>
+                </div>
+                <div class="overflow-x-scroll no-scrollbar">
+                  <span class="text-xs text-[#686868]">23IJSD9DW0WJXCJSD9DW0WJXCV3350AV3350ASDF</span>
+                </div>
+              </div>
+              <div class="mt-3 p-2  bg-activeNhover rounded-sm overflow-hidden">
+                <div class="flex justify-between items-center">
+                  <span class="text-xs">16:23, 12 dec 2018</span>
+                  <div>
+                    <i class="lni lni-arrow-left text-md text-red-700"></i>
+                    <span>0.5 LTC</span>
+                  </div>
+                </div>
+                <div class="overflow-x-scroll no-scrollbar">
+                  <span class="text-xs text-[#686868]">23IJSD9DW0WJXCJSD9DW0WJXCV3350AV3350ASDF</span>
                 </div>
               </div>
             </div>
