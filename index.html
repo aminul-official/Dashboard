@@ -14,11 +14,11 @@
         theme: {
           screens: {
             'xs':'320px',
-            'sm': '640px',
-            'md': '768px',
-            'lg': '1024px',
-            'xl': '1280px',
-            '2xl': '1536px',
+            'sm':'640px',
+            'md':'768px',
+            'lg':'1024px',
+            'xl':'1280px',
+            '2xl':'1536px',
           },
           extend: {
             colors: {
@@ -32,7 +32,7 @@
               exclamatory:"#6f6f76",
             },
             screens:{
-            '3xl': '1600px',
+            '3xl':'1600px',
             '4xl':'1920px',
             '5xl':'2560px',
             }
@@ -235,7 +235,7 @@
           </div>
         </div>
         <div  class="flex items-center">
-          <div class="flex items-center md:mr-[20px] lg:mr-[40px] xl:mr-[140px] 2xl:mr-[155px] 3xl:mr-[186px] 4xl:mr-[255px] 5xl:mr-[380px]">
+          <div class="flex items-center mr-0 sm:mr-0 md:mr-[20px] lg:mr-[40px] xl:mr-[140px] 2xl:mr-[155px] 3xl:mr-[186px] 4xl:mr-[363px] 5xl:mr-[380px]">
             <!-- <div class="support-div-n-icon inline px-2.5 py-2 pr-10 bg-activeNhover mr-2 rounded-sm relative">
               <i class="lni lni-warning text-supportIcon text-2xl"></i>
               <span class="font-semibold absolute top-1">Support</span>
@@ -248,7 +248,7 @@
               <i class="lni lni-plus text-xs sm:text-sm md:text-base lg:text-base xl:text-lg 2xl:text-xl"></i>
             </div>
           </div>
-          <div class="flex items-center justify-between w-56 md:w-44 lg:w-48">
+          <div class="flex items-center justify-between w-56 md:w-44 lg:w-48 4xl:w-52">
             <div>
               <i class="lni lni-menu text-exclamatory"></i>
             </div>
@@ -263,30 +263,31 @@
         <div class="wallets-main grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[190px,1fr] lg:grid-cols-[230px,1fr] xl:grid-cols-[295px,1fr] 2xl:grid-cols-[340px,1fr] 3xl:grid-cols-[375px,1fr] 4xl:grid-cols-[410px,1fr] 5xl:grid-cols-[465px,1fr]">
           <div class="transaction-balance-overview grid grid-rows-[40px,1fr]">
             <div>
-              <span>Overview</span>              
+              <span class="4xl:text-xl">Overview</span>              
+              <i class="lni lni-more-alt rotate-90 text-[#3c3c3c]"></i>
             </div>
-            <div class="bg-activeNhover text-white flex flex-col p-5 rounded-sm">
+            <div class="bg-activeNhover text-white flex flex-col p-5 4xl:p-7 rounded-sm 4xl:justify-between">
               <div class="flex justify-between">
                 <div>
-                  <h1 class="text-4xl mt-2">2,345</h1>
+                  <h1 class="text-4xl mt-2 4xl:ml-3 4xl:mb-2 4xl:text-7xl">2,345</h1>
                   <!-- <span class="text-[#3b3c44]">Transactions</span> -->
-                  <span class="text-[#606060] text-sm">Transactions</span>
+                  <span class="text-[#606060] 4xl:pt-3 text-sm 4xl:text-xl">Transactions</span>
                 </div>
                 <div>
-                  <div class="px-3 py-2 bg-[#242528] rounded">
-                    <h1 class="text-4xl ml-2">5</h1>
-                    <p>Wallets</p>
+                  <div class="bg-[#242528] rounded px-3 py-2 4xl:px-5 4xl:py-3">
+                    <h1 class=" ml-2 4xl:ml-1 text-4xl 4xl:text-7xl">5</h1>
+                    <p class="4xl:text-2xl">Wallets</p>
                   </div>
                 </div>
               </div>
-              <div class="mt-10">
-                <p class="text-sm text-[#9f9f9f] font-normal">Current balance</p>
-                <h1 class="h-20 text-5xl mt-2">3.4330<sup class="text-xs align-top text-[#5e5e5e] font-extrabold ml-1">USD</sup></h1>
+              <div class="mt-10 4xl:mt-0 4xl:h-38">
+                <p class="text-sm text-[#9f9f9f] font-normal 4xl:text-xl">Current balance</p>
+                <h1 class="h-20 text-5xl mt-2 4xl:text-8xl">3.4330<sup class="text-xs 4xl:text-xl align-top text-[#5e5e5e] font-extrabold ml-1">USD</sup></h1>
               </div>
-              <div class="flex justify-between">
+              <div class="flex justify-between 4xl:text-xl">
                 <p>2.7995 EUR <span class="text-[#a6d345] font-medium">+12%</span></p>
-                <div class="border-2 border-[#7ac230] hover:bg-[#7ac230] pl-[18px] pr-[17px] pb-[2px] rounded-3xl">
-                  <span>buy</span>
+                <div class="border-2 border-[#7ac230] 4xl:border-[3px] hover:bg-[#7ac230] pl-[18px] pr-[17px] pb-[2px] rounded-3xl">
+                  <span class="">buy</span>
                 </div>
               </div>
             </div>
@@ -294,11 +295,11 @@
           <div class="my-wallets grid grid-rows-[40px,1fr]">
             <div class="flex justify-between">
               <span class="text-lg">My Wallets</span>
-              <span class="text-sm mt-1 sm:mt-2 text-[#73b730] font-medium">Add wallet</span>
+              <span class="text-sm 4xl:text-base mt-1 sm:mt-2 4xl:mt-1 5xl:mt-2 text-[#73b730] font-medium">Add wallet</span>
             </div>
             <div class="h-full mt-2 sm:mt-2 grid gap-5 grid-rows-[130px,1fr] sm:grid-rows-[130px,1fr] lg:grid-rows-[100px,1fr] xl:grid-rows-[100px,1fr] 2xl:grid-rows-[105px,1fr] 3xl:grid-rows-[108px,1fr] 4xl:grid-rows-[125px,1fr] 5xl:grid-rows-[160px,1fr]">
               <div class="relative overflow-x-scroll no-scrollbar">
-                <div class="absolute grid gap-5 xs:grid-cols-[238px,165px,165px,165px] sm:grid-cols-[270px,165px,165px,165px] md:grid-cols-[1fr,1fr,1fr,1fr] lg:grid-cols-[160px,1fr,1fr,1fr] xl:grid-cols-[180px,1fr,1fr,1fr] 2xl:grid-cols-[200px,1fr,1fr,1fr] 3xl:grid-cols-[240px,1fr,1fr,1fr] 4xl:grid-cols-[240px,1fr,1fr,1fr] 5xl:grid-cols-[460px,1fr,1fr,1fr]">
+                <div class="absolute grid gap-5 grid-cols-[238px,165px,165px,165px] xs:grid-cols-[238px,165px,165px,165px] sm:grid-cols-[270px,165px,165px,165px] md:grid-cols-[1fr,1fr,1fr,1fr] lg:grid-cols-[160px,1fr,1fr,1fr] xl:grid-cols-[180px,1fr,1fr,1fr] 2xl:grid-cols-[200px,1fr,1fr,1fr] 3xl:grid-cols-[240px,1fr,1fr,1fr] 4xl:grid-cols-[240px,1fr,1fr,1fr] 5xl:grid-cols-[460px,1fr,1fr,1fr]">
                   <div class="bg-[#79c131] rounded-sm flex flex-col justify-between p-3">
                     <div class="flex justify-between">
                       <span class="font-semibold text-[#65a028] mt-3">BTC</span>
@@ -391,7 +392,7 @@
                       </div>
                     </div>
                     <h2  class="w-16 text-2xl">12%</h2>
-                    <span class="w-20 text-sm text-[#686868]  ">Ethereum</span>
+                    <span class="w-20 text-sm text-[#686868]">Ethereum</span>
                     <div>
                       <i class="lni lni-more-alt rotate-90 text-[#3c3c3c]"></i>
                     </div>
@@ -468,23 +469,98 @@
             </div>
           </div>
         </div>
-        <div class="bitcoin-chart-main grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[300px,1fr] lg:grid-cols-[450px,1fr] xl:grid-cols-[650px,1fr] 2xl:grid-cols-[700px,1fr] 3xl:grid-cols-[765px,1fr] 4xl:grid-cols-[900px,1fr] 5xl:grid-cols-[1270px,1fr] grid-rows-2 sm:grid-rows-2">
-          <div class="bg-green-500">
-            <div class="p-3 flex">
+        <div class="bitcoin-chart-main grid gap-5 grid-cols-[1fr] sm:grid-cols-[1fr] md:grid-cols-[300px,1fr] lg:grid-cols-[450px,1fr] xl:grid-cols-[650px,1fr] 2xl:grid-cols-[700px,1fr] 3xl:grid-cols-[765px,1fr] 4xl:grid-cols-[900px,1fr] 5xl:grid-cols-[1270px,1fr]">
+          <div class="bg-[#1c2024] rounded-sm">
+            <div class="p-3 flex flex-col">
               <div class="flex justify-between">
                 <h1>Bitcoin Chart</h1>
                 <div>
-                  <span>1m</span>
-                  <span>3m</span>
-                  <span>All</span>
+                  <span class="text-[#3c3c3c]">1m</span>
+                  <span class=" bg-[#3f3f48] pl-[11px] pr-[9px] pb-[2px] rounded-3xl">3m</span>
+                  <span class="text-[#3c3c3c]">All</span>
                   <i class="lni lni-more-alt rotate-90 text-[#3c3c3c]"></i>
                 </div>
               </div>
-              <div></div>
+              <div class="mt-5">
+                <img class="h-48" src="./assets/images/bitcoin-chart.jpg" alt="">
+              </div>
             </div>
           </div>
-          <div class="bg-blue-500">
-            blue
+          <div class="p-3 bg-[#2a2b31] rounded-sm">
+            <div class="flex flex-col">
+              <div class="flex justify-between">
+                <div>
+                  <span>Markets</span>
+                </div>
+                <div class="font-extrabold">
+                  <span class="text-xs text-[#606166]">USD</span>
+                  <span  class="text-xs">EUR</span>
+                  <span  class="text-xs text-[#606166]">BTC</span>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex flex-row justify-between items-center border-b-[1px] border-[#3a3b42] py-2">
+                  <div class="flex flex-col">
+                    <div>
+                      <span class="text-xs text-[#606166] font-extrabold">DASH/EUR</span>
+                      <span class="text-xs text-[#606166]  ml-2">1.93%</span>
+                    </div>
+                    <div>
+                      <span class="font-semibold text-sm">0.0834</span>
+                      <span class="text-sm ml-2">EUR</span>
+                    </div>
+                  </div>
+                  <div>
+                    <img src="./assets/images/dash-chart.jpg" alt="">
+                  </div>
+                </div>
+                <div class="flex flex-row justify-between items-center border-b-[1px] border-[#3a3b42] py-2">
+                  <div class="flex flex-col">
+                    <div>
+                      <span class="text-xs text-[#606166] font-extrabold">ETH/EUR</span>
+                      <span class="text-xs text-[#606166] ml-2">-1.14%</span>
+                    </div>
+                    <div>
+                      <span class="font-semibold text-sm">1,087.91</span>
+                      <span class="text-sm ml-2">EUR</span>
+                    </div>
+                  </div>
+                  <div>
+                    <img src="./assets/images/eth-chart.jpg" alt="">
+                  </div>
+                </div>
+                <div class="flex flex-row justify-between items-center border-b-[1px] border-[#3a3b42] py-2">
+                  <div class="flex flex-col">
+                    <div>
+                      <span class="text-xs text-[#606166] font-extrabold">LTC/EUR</span>
+                      <span class="text-xs text-[#606166]  ml-2">-0.48%</span>
+                    </div>
+                    <div>
+                      <span class="font-semibold text-sm">197.48</span>
+                      <span class="text-sm ml-2">EUR</span>
+                    </div>
+                  </div>
+                  <div>
+                    <img src="./assets/images/ltc-chart.jpg" alt="">
+                  </div>
+                </div>
+                <div class="flex flex-row justify-between items-center py-2">
+                  <div class="flex flex-col">
+                    <div>
+                      <span class="text-xs text-[#606166] font-extrabold">BTC/EUR</span>
+                      <span class="text-xs text-[#606166]  ml-2">1.75%</span>
+                    </div>
+                    <div>
+                      <span class="font-semibold text-sm">11,435.18</span>
+                      <span class="text-sm ml-2">EUR</span>
+                    </div>
+                  </div>
+                  <div>
+                    <img src="./assets/images/btc-chart.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="transactions-main bg-pink-500 col-start-1 sm:col-start-1 md:col-start-2 lg:col-start-2 xl:col-start-2 2xl:col-start-2 3xl:col-start-2 4xl:col-start-2 5xl:col-start-2 row-start-3 sm:row-start-3 md:row-start-1 lg:row-start-1 xl:row-start-1 2xl:row-start-1 3xl:row-start-1 4xl:row-start-1 5xl:row-start-1  md:row-end-3 lg:row-end-3 xl:row-end-3 2xl:row-end-3 3xl:row-end-3 4xl:row-end-3 5xl:row-end-3 mt-0 xs:mt-0 sm:mt-0 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-10 3xl:mt-10 4xl:mt-10 5xl:mt-10 grid grid-cols-[1fr]">
