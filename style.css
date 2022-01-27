@@ -148,3 +148,23 @@ input.top-bar-search-input[type="search"]::-webkit-search-results-decoration {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* Chrome, Safari, Edge, Opera */
+.no-btn::-webkit-outer-spin-button,
+.no-btn::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.no-btn[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* checked or selected option background */
+
+.wallet-option:checked, .wallet-option:hover {
+  color: white;
+  background: #7ac230;
+}
