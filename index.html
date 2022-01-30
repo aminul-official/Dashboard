@@ -9,6 +9,11 @@
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
     <link href="/dist/output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- cdn for chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script> -->
+    
     <script>
       tailwind.config = {
         theme: {
@@ -477,12 +482,17 @@
                 <div>
                   <span class="text-[#3c3c3c]">1m</span>
                   <span class=" bg-[#3f3f48] pl-[11px] pr-[9px] pb-[2px] rounded-3xl">3m</span>
+                  <span class="text-[#3c3c3c]">6m</span>
+                  <span class="text-[#3c3c3c]">1y</span>
                   <span class="text-[#3c3c3c]">All</span>
                   <i class="lni lni-more-alt rotate-90 text-[#3c3c3c]"></i>
                 </div>
               </div>
               <div class="mt-5">
-                <img class="h-48" src="./assets/images/bitcoin-chart.jpg" alt="">
+                <!-- <img class="h-48" src="./assets/images/bitcoin-chart.jpg" alt=""> -->
+                <div class="">
+                  <canvas id="myChart"></canvas>
+                </div>
               </div>
             </div>
           </div>
@@ -659,3 +669,8 @@
     <script src="./setting.js"></script>
   </body>
 </html>
+
+
+
+<!-- main template -->
+<!-- https://www.behance.net/gallery/63885757/Crypto-Wallet-Blockchain-Dashboard-Free-Download?tracking_source=search_projects_recommended%7Ccrypto%20dashboard -->

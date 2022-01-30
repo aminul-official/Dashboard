@@ -168,3 +168,12 @@ input.top-bar-search-input[type="search"]::-webkit-search-results-decoration {
   color: white;
   background: #7ac230;
 }
+
+
+#chart {
+  position: absolute;
+  z-index: 2;
+}
+#chart .area {
+  opacity: 0.4;
+}
