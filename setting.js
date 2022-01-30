@@ -247,15 +247,32 @@ var xyValues = [
   },
 ];
 
-// var xyValues = [
-//   ["23 oct", 16.9],
-//   ["6 nov", 17],
-//   ["1993", 6.5],
-//   ["20 nov", 8.7],
-//   ["4 dec", 25],
-//   ["18 dec", 7.2],
-//   ["1 jan", 0.5],
-// ];
+var xyValues = [
+  {
+    x:'23 oct',
+    y: 500.9654065969375,
+  },
+  {
+    x: "6 nov",
+    y: 1000.9654065969375,
+  },
+  {
+    x: "20 nov",
+    y: 1200.48089550683521,
+  },
+  {
+    x: "4 dec",
+    y: 1503.3952945670304,
+  },
+  {
+    x: "18 dec",
+    y: 1842.09092570663737,
+  },
+  {
+    x: "1 jan",
+    y: 1950.686361199212634,
+  }
+];
 
 const ctx = document.getElementById("myChart").getContext("2d");
 // const data = [
@@ -308,7 +325,9 @@ const myChart = new Chart(ctx, {
           },
         },
         time: {
-          unit: "month",
+          displayFormats: {
+            quarter: "MMM YYYY",
+          },
         },
       },
       y: {
